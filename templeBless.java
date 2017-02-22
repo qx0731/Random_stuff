@@ -28,7 +28,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
- * Created by 左小猫 on 16/10/11.
+ * Created by 左小猫 on 16/10/11, uploaded by Kim Xu
  */
 public class publishServiceTest extends BaseTest {
     @org.junit.Before
