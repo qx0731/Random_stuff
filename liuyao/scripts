@@ -19,9 +19,12 @@ class Gua:
         for _ in range(num):
             coins.append(int(random.uniform(0, 1)*2 ))
         return coins
+        
+    def print(self):
+        for i in reversed(range(len(self.gua_name))):
+            print(self.gua_name[i])
 
 
 gua_sample = Gua()
-print(gua_sample.gua)
-print(gua_sample.gua_name)
+gua_sample.print()
 
