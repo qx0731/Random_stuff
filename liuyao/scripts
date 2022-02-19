@@ -1,0 +1,27 @@
+import random
+import numpy as np
+
+name2yao={u'老阴--X--':'0', u'少阳-----':'1',u'少阴-- --':'2',u'老阳--O--':'3'}
+yao2name={0:u'老阴--X--', 1:u'少阳-----',2: u'少阴-- --',3:u'老阳--O--'}
+
+class Gua:
+    def __init__(self):
+        self.gua = []
+        self.gua_name = []
+        for _ in range(6):
+            coins = self._toss_n_coins()
+            self.gua.append(np.sum(coins))
+            self.gua_name.append(yao2name[np.sum(coins)])
+
+    def _toss_n_coins(self, num=3):
+        # toss coins for num times
+        coins = []
+        for _ in range(num):
+            coins.append(int(random.uniform(0, 1)*2 ))
+        return coins
+
+
+gua_sample = Gua()
+print(gua_sample.gua)
+print(gua_sample.gua_name)
+
